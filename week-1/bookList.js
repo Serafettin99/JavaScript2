@@ -31,14 +31,12 @@ for (let i = 0; i < books.length; i++) {
   let details = document.createTextNode(`${books[i].title} by ${books[i].author}`);
   document.body.appendChild(pElement);
   pElement.appendChild(details);
-
   //                 or
   //pElement.innerText = `${books[i].title} by ${books[i].author}`;
   // document.body.appendChild(pElement);
   //In order to get the same result; we can use `innerHTML` and `textContent` instead of `innerText` as well.
   let liElement = document.createElement('li');
   liElement.appendChild(pElement);
-
   ulElement.appendChild(liElement);
 
   let imgElement = document.createElement('img');
@@ -47,7 +45,7 @@ for (let i = 0; i < books.length; i++) {
   imgElement.style.height = '150px';
 
   if (books[i].alreadyRead) {
-    pElement.style.color = 'grey';
+    pElement.style.color = 'green';
   } else {
     pElement.style.color = 'red';
   }

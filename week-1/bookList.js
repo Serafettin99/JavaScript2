@@ -23,11 +23,13 @@ const images = [
   'https://images-na.ssl-images-amazon.com/images/I/51SadPtdWPL.jpg',
 ];
 
-let ulElement = document.createElement('ul');
+const alt = 'book image';
+
+const ulElement = document.createElement('ul');
 document.body.appendChild(ulElement);
 
 for (let i = 0; i < books.length; i++) {
-  let pElement = document.createElement('p');
+  const pElement = document.createElement('p');
   let details = document.createTextNode(`${books[i].title} by ${books[i].author}`);
   document.body.appendChild(pElement);
   pElement.appendChild(details);
@@ -35,14 +37,15 @@ for (let i = 0; i < books.length; i++) {
   //pElement.innerText = `${books[i].title} by ${books[i].author}`;
   // document.body.appendChild(pElement);
   //In order to get the same result; we can use `innerHTML` and `textContent` instead of `innerText` as well.
-  let liElement = document.createElement('li');
+  const liElement = document.createElement('li');
   liElement.appendChild(pElement);
   ulElement.appendChild(liElement);
 
-  let imgElement = document.createElement('img');
+  const imgElement = document.createElement('img');
   liElement.appendChild(imgElement);
   imgElement.setAttribute('src', images[i]);
   imgElement.style.height = '150px';
+  imgElement.setAttribute('alt', alt);
 
   if (books[i].alreadyRead) {
     pElement.style.color = 'green';

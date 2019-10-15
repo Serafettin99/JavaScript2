@@ -1,3 +1,4 @@
+'use strict';
 // Look at the following code snippet:
 
 // function doubleEvenNumbers(numbers) {

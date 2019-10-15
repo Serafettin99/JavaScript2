@@ -28,7 +28,7 @@ const mondayTasks = [
 // Make sure the program can be used on any array of objects that contain a duration property with a number value
 
 function amountOfEarn(tasks) {
-  return tasks.map(task => (task.duration * 25) / 60).reduce((acc, curr) => acc + curr, 0);
+  return `€${tasks.map(task => (task.duration * 25) / 60).reduce((acc, curr) => acc + curr, 0)}`;
 }
 
 console.log(amountOfEarn(mondayTasks));

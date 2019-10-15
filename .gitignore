@@ -59,3 +59,6 @@ typings/
 
 .netlify
 dist/
+
+#deneme
+week-2\deneme.js

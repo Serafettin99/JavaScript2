@@ -13,12 +13,12 @@ const hackYourFutureMembers = [
 // The callback adds all the ages together and returns the number
 // The main function should log the string "The collective age of the HYF team is: [number]" to the console, and afterwards return the number
 
-function callback(members) {
+function getTheAges(members) {
   return members.map(member => member.age).reduce((acc, curr) => acc + curr, 0);
 }
 
-function combineTheAges(members) {
-  return `The collective age of the HYF team is: ${callback(members)}`;
+function combineTheAges(callback) {
+  return `The collective age of the HYF team is: ${callback}`;
 }
 
-console.log(combineTheAges(hackYourFutureMembers));
+console.log(combineTheAges(getTheAges(hackYourFutureMembers)));
